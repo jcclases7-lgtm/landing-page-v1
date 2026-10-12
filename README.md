@@ -58,4 +58,82 @@ pet-paradise-project/
 * **Motor de Base de Datos:** MySQL Server 8.0 o superior (o MariaDB equivalente).
 * **Entorno Cliente:** Navegadores modernos con soporte completo de ES6+ (Chrome, Edge, Safari, Firefox).
 
+---
 
+## 💻 Comandos e Instalación (Paso a Paso)
+
+Sigue estos 4 pasos simplificados para desplegar el servidor local y la infraestructura de datos en sistemas basados en Linux Debian/Ubuntu:
+
+### Paso 1: Instalar el Servidor MySQL y Servidor Web
+Ejecuta la actualización de repositorios e instala las dependencias de base de datos y alojamiento.
+```bash
+sudo apt update
+sudo apt install mysql-server apache2 -y
+```
+
+### Paso 2: Iniciar y Asegurar el Servicio MySQL
+Verifica que el demonio de base de datos esté corriendo y ejecuta la inicialización segura de credenciales.
+```bash
+sudo systemctl start mysql
+sudo mysql_secure_installation
+```
+
+### Paso 3: Despliegue de Estructuras (Script Ficticio)
+Conéctate al entorno interactivo de MySQL y ejecuta las sentencias de inicialización para crear el esquema dinámico de la tienda. Puedes guardar este código como `db_init.sql` y cargarlo:
+
+```sql
+-- SCRIPT FICTICIO DE INICIALIZACIÓN: db_init.sql
+CREATE DATABASE IF NOT EXISTS pet_paradise_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE pet_paradise_db;
+
+-- Tabla de contactos de la landing page
+CREATE TABLE IF NOT EXISTS contactos_landing (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_cliente VARCHAR(100) NOT NULL,
+    nombre_mascota VARCHAR(100),
+    email VARCHAR(150) NOT NULL,
+    mensaje TEXT NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de servicios destacados para renderizado dinámico futuro
+CREATE TABLE IF NOT EXISTS servicios_tienda (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    categoria VARCHAR(50) NOT NULL,
+    titulo VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    estado_disponible BOOLEAN DEFAULT TRUE
+);
+
+-- Inserción de las 4 secciones destacadas requeridas
+INSERT INTO servicios_tienda (categoria, titulo, descripcion) VALUES
+('Alimentos', 'Nutrición Premium', 'Alimentos terapéuticos de marcas líderes del mercado.'),
+('Juguetes', 'Diversión e Inteligencia', 'Rascadores, pelotas y mordedores interactivos.'),
+('Remedios', 'Farmacia Certificada', 'Antiparasitarios externos, internos y suplementos vitamínicos.'),
+('Peluqueria', 'Spa y Estilo Canino', 'Cortes higiénicos, baños de tratamiento y desmotado.');
+```
+
+Para ejecutar el script directamente desde la terminal del sistema:
+```bash
+sudo mysql -u root -p < db_init.sql
+```
+
+### Paso 4: Publicación de los Archivos en el Servidor
+Mueve los archivos de tu proyecto al directorio raíz del servidor HTTP para hacerlos accesibles a la red local.
+```bash
+sudo cp -r . /var/www/html/pet-paradise/
+sudo systemctl restart apache2
+```
+
+---
+
+## 🗲 Grilla del Menú y Mapeo Funcional
+
+A continuación, se detalla la navegación y acciones integradas en la interfaz de usuario:
+
+| Opción del Menú | Anclaje (ID HTML) | Acción Esperada en Frontend | Conexión MySQL Asociada |
+| :--- | :--- | :--- | :--- |
+| **Inicio** | `#inicio` | Desplazamiento suave al banner de bienvenida (Hero View). | N/A (Estático) |
+| **Servicios** | `#servicios` | Redirección visual a las 4 tarjetas (Alimentos, Juguetes, Remedios, Peluquería). | Lectura a tabla `servicios_tienda` |
+| **Ubicación** | `#ubicacion` | Vista de los datos físicos interactivos en Puerto Varas. | N/A (Configuración Geográfica) |
+| **Contacto** | `#contacto` | Enfoque al formulario web y despliegue de links a WhatsApp/Email. | Escritura en tabla `contactos_landing` |
