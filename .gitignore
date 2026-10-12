@@ -1,0 +1,14 @@
+
+# este archivo .env se ignorara y no se envia al repositio
+# al estar nombrado dentro del  .gitignore
+# para evitar enviar los datos se crea un similar pero sin los datos
+# protegidos, solo los nombres de los campos requeridos
+
+# ejemplos:
+# .env
+# .ventor
+# .nodes_modules , etc
+#
+
+
+.env

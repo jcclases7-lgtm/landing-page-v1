@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Paradise - Tienda de Mascotas en Puerto Varas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-800 scroll-smooth">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 text-2xl brand-font text-teal-600 font-bold tracking-wide">
+                <i class="fa-solid fa-paw text-amber-500 text-3xl animate-bounce"></i>
+                <span>Pet<span class="text-amber-500">Paradise</span></span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 font-semibold text-lg text-gray-600">
+                <a href="#inicio" class="hover:text-teal-600 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-teal-600 transition">Secciones</a>
+                <a href="#ubicacion" class="hover:text-teal-600 transition">Ubicación</a>
+                <a href="#contacto" class="hover:text-teal-600 transition">Contacto</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <a href="https://wa.me/56912345678" target="_blank" class="bg-emerald-500 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-emerald-600 transition flex items-center space-x-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span class="hidden sm:inline">Escríbenos</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-20 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6">
+                <span class="bg-amber-400 text-teal-950 font-bold px-4 py-1.5 rounded-full text-sm uppercase tracking-wider">¡Bienvenidos a Puerto Varas!</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">El paraíso ideal para tu mejor amigo</h1>
+                <p class="text-lg md:text-xl text-teal-50 opacity-90">Cuidamos a tus mascotas con el amor que se merecen. Encuentra la mejor calidad en alimentos, diversión garantizada y un spa de peluquería de primer nivel.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#servicios" class="bg-amber-400 hover:bg-amber-500 text-teal-950 font-bold px-8 py-3.5 rounded-full shadow-lg transition transform hover:-translate-y-0.5 text-center w-full sm:w-auto">Explorar Tienda</a>
+                    <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white hover:text-teal-600 font-bold px-8 py-3.5 rounded-full transition text-center w-full sm:w-auto">Contáctanos</a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <div class="absolute w-72 h-72 md:w-96 md:h-96 bg-amber-300 rounded-full filter blur-2xl opacity-30 animate-pulse top-10"></div>
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Perro feliz en Pet Paradise" class="rounded-3xl shadow-2xl border-8 border-white max-w-full h-auto object-cover transform rotate-2 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sections (4 Columnas) -->
+    <section id="servicios" class="py-20 container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-teal-800">Nuestros Servicios Destacados</h2>
+            <p class="text-gray-600 text-lg">Todo lo necesario para mantener a tu mascota saludable, enérgica y reluciente en un solo lugar frente al Lago Llanquihue.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Alimentos -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 flex flex-col h-full border border-teal-50">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1589924691995-400dc9ebd109?auto=format&fit=crop&w=400&q=80" alt="Alimentos Premium" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Premium</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow space-y-3">
+                    <h3 class="text-2xl font-bold text-teal-700 flex items-center gap-2">
+                        <i class="fa-solid fa-bone text-amber-500"></i> Alimentos
+                    </h3>
+                    <p class="text-gray-600 text-sm flex-grow">Nutrición balanceada con marcas líderes y líneas terapéuticas adaptadas para cada etapa de su vida.</p>
+                    <a href="https://wa.me/56912345678?text=Hola!%20Me%20interesa%20saber%20sobre%20los%20alimentos" target="_blank" class="mt-4 text-center bg-teal-50 text-teal-700 font-bold py-2 rounded-xl hover:bg-teal-600 hover:text-white transition">Consultar stock</a>
+                </div>
+            </div>
+
+            <!-- Juguetes -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 flex flex-col h-full border border-teal-50">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=400&q=80" alt="Juguetes Divertidos" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-amber-400 text-teal-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Diversión</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow space-y-3">
+                    <h3 class="text-2xl font-bold text-teal-700 flex items-center gap-2">
+                        <i class="fa-solid fa-baseball text-amber-500"></i> Juguetes
+                    </h3>
+                    <p class="text-gray-600 text-sm flex-grow">Pelotas, mordedores, juguetes interactivos e ingeniosos rascadores para mantenerlos activos y felices.</p>
+                    <a href="https://wa.me/56912345678?text=Hola!%20Me%20interesa%20ver%20catálogo%20de%20juguetes" target="_blank" class="mt-4 text-center bg-teal-50 text-teal-700 font-bold py-2 rounded-xl hover:bg-teal-600 hover:text-white transition">Ver catálogo</a>
+                </div>
+            </div>
+
+            <!-- Remedios -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 flex flex-col h-full border border-teal-50">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=400&q=80" alt="Remedios y Salud" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Farmacia</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow space-y-3">
+                    <h3 class="text-2xl font-bold text-teal-700 flex items-center gap-2">
+                        <i class="fa-solid fa-prescription-bottle-medical text-amber-500"></i> Remedios
+                    </h3>
+                    <p class="text-gray-600 text-sm flex-grow">Fármacos certificados, antiparasitarios internos/externos, vitaminas y suplementos con la mejor orientación.</p>
+                    <a href="https://wa.me/56912345678?text=Hola!%20Necesito%20cotizar%20un%20medicamento" target="_blank" class="mt-4 text-center bg-teal-50 text-teal-700 font-bold py-2 rounded-xl hover:bg-teal-600 hover:text-white transition">Cotizar receta</a>
+                </div>
+            </div>
+
+            <!-- Peluquería -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 flex flex-col h-full border border-teal-50">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=400&q=80" alt="Peluquería Canina" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Estilo</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow space-y-3">
+                    <h3 class="text-2xl font-bold text-teal-700 flex items-center gap-2">
+                        <i class="fa-solid fa-scissors text-amber-500"></i> Peluquería
+                    </h3>
+                    <p class="text-gray-600 text-sm flex-grow">Cortes de pelo estéticos, baños sanitarios, corte de uñas y limpieza de oídos con el máximo cuidado y relajo.</p>
+                    <a href="https://wa.me/56912345678?text=Hola!%20Quiero%20agendar%20una%20hora%20de%20peluquería" target="_blank" class="mt-4 text-center bg-teal-50 text-teal-700 font-bold py-2 rounded-xl hover:bg-teal-600 hover:text-white transition">Agendar hora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section (Puerto Varas) -->
+    <section id="ubicacion" class="bg-teal-800 text-white py-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-bold">¿Dónde encontrarnos en Puerto Varas?</h2>
+                <p class="text-teal-100 text-lg leading-relaxed">
+                    Estamos ubicados en una zona de fácil acceso y estacionamiento seguro para que vengas cómodamente junto a tu mascota. Disfruta de una linda vista antes o después de consentir a tu compañero fiel.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-amber-400 text-xl mt-1"></i>
+                        <div>
+                            <p class="font-bold text-lg">Dirección Ficticia:</p>
+                            <p class="text-teal-100">Av. Vicente Pérez Rosales #1420, Puerto Varas, Región de Los Lagos, Chile.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-clock text-amber-400 text-xl mt-1"></i>
+                        <div>
+                            <p class="font-bold text-lg">Horario de Atención:</p>
+                            <p class="text-teal-100">Lunes a Sábado: 09:00 - 19:30 hrs.<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-80 rounded-2xl overflow-hidden bg-teal-700 shadow-xl border-4 border-teal-600 relative flex items-center justify-center">
+                <!-- Simulación estética de un mapa integrado moderno -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80'); filter: grayscale(30%);"></div>
+                <div class="relative z-10 text-center p-6 space-y-4">
+                    <div class="bg-amber-400 text-teal-950 p-4 rounded-full inline-block shadow-lg animate-bounce">
+                        <i class="fa-solid fa-location-crosshairs text-3xl"></i>
+                    </div>
+                    <p class="font-bold text-xl drop-shadow-md">Frente al Lago Llanquihue</p>
+                    <span class="bg-teal-900/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-mono border border-teal-500">Coordenadas: -41.3204, -72.9854</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contacto" class="py-20 container mx-auto px-4 max-w-5xl">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-5 border border-teal-100">
+            <!-- Información Rápida -->
+            <div class="md:col-span-2 bg-gradient-to-br from-teal-600 to-teal-700 text-white p-8 md:p-12 flex flex-col justify-between space-y-8">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold">Canales Directos</h3>
+                    <p class="text-teal-100">Resuelve dudas de stock, agenda horas estéticas o haz pedidos exprés por cualquiera de nuestras vías.</p>
+                </div>
+                
+                <div class="space-y-5">
+                    <a href="tel:+56652998877" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/10 transition group">
+                        <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center text-xl text-amber-300 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-teal-200 font-bold uppercase tracking-wider">Llámanos</p>
+                            <p class="font-semibold text-lg text-white">+56 65 299 8877</p>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/56912345678" target="_blank" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/10 transition group">
+                        <div class="w-11 h-11 bg-emerald-500/20 rounded-full flex items-center justify-center text-xl text-emerald-400 group-hover:scale-110 transition">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-teal-200 font-bold uppercase tracking-wider">WhatsApp</p>
+                            <p class="font-semibold text-lg text-white">+56 9 1234 5678</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:hola@petparadise.cl" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/10 transition group">
+                        <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center text-xl text-amber-300 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-teal-200 font-bold uppercase tracking-wider">Escríbenos</p>
+                            <p class="font-semibold text-sm sm:text-base text-white">hola@petparadise.cl</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pt-4 border-t border-teal-500/50 flex space-x-4 text-2xl text-teal-200">
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <form class="md:col-span-3 p-8 md:p-12 space-y-6" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito de forma simulada!');">
+                <h3 class="text-2xl font-bold text-teal-800">¿Tienes alguna pregunta?</h3>
+                <p class="text-gray-500 text-sm">Déjanos tus datos y te responderemos a la brevedad posible.</p>
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-gray-500 uppercase">Nombre</label>
+                        <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-50">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-gray-500 uppercase">Nombre de tu mascota</label>
+                        <input type="text" placeholder="Ej. Firulais" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-50">
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-gray-500 uppercase">Correo Electrónico</label>
+                    <input type="email" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-50">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-gray-500 uppercase">Mensaje</label>
+                    <textarea rows="4" required placeholder="¿En qué te podemos ayudar?" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-50 resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-400 hover:bg-amber-500 text-teal-950 font-bold py-3.5 rounded-xl shadow-lg transition uppercase tracking-wider text-sm">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 text-center text-sm">
+        <p>&copy; 2026 Pet Paradise Puerto Varas. Todos los derechos reservados.</p>
+        <p class="text-xs text-gray-600 mt-1">Diseño ficticio con fines ilustrativos y comerciales para la Región de Los Lagos.</p>
+    </footer>
+
+</body>
+</html>
